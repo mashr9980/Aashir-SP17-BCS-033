@@ -90,7 +90,7 @@ class DiceApp extends StatelessWidget {
                   children: [
                     RaisedButton(
                       onPressed: () {
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context, MaterialPageRoute(builder: (context) => HomePage()));
                       },
                       textColor: Colors.white,
@@ -113,7 +113,7 @@ class DiceApp extends StatelessWidget {
                     SizedBox(height: 20,),
                     RaisedButton(
                       onPressed: () {
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context, MaterialPageRoute(builder: (context) => hard_level()));
                       },
                       textColor: Colors.white,
