@@ -147,7 +147,6 @@ class DiceApp extends StatelessWidget {
                   ),
                 ],
               )
-              // Text("Aashir Tariq",style:TextStyle(fontSize: 30)),
 
             ],
           ),
