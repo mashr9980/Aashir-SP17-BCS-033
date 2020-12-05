@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'dart:math';
 
-
+import 'HomePage.dart';
 void main() {
   runApp(SplashScreen());
 }
@@ -85,16 +85,19 @@ class DiceApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) => HomePage()));
+                      },
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(0.0),
                       child: Container(
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
                             colors: <Color>[
-                              Colors.red,
-                              Colors.red,
-                              Colors.red,
+                              Colors.pinkAccent,
+                              Colors.pinkAccent,
+                              Colors.pinkAccent,
                             ],
                           ),
                         ),
@@ -112,9 +115,9 @@ class DiceApp extends StatelessWidget {
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
                             colors: <Color>[
-                              Colors.red,
-                              Colors.red,
-                              Colors.red,
+                              Colors.pinkAccent,
+                              Colors.pinkAccent,
+                              Colors.pinkAccent,
                             ],
                           ),
                         ),
