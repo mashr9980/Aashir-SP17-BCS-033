@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.pinkAccent,
                   padding: EdgeInsets.fromLTRB(30.0, 15.0, 30.0, 15.0),
                   child: Text(
-                    'Roll the dice!', style: TextStyle(color: Colors.white),
+                    'Play !', style: TextStyle(color: Colors.white),
                   ),
                   onPressed: rollDice,
                 ),

@@ -2,8 +2,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'dart:math';
-
 import 'HomePage.dart';
+import 'HardPage.dart';
+
 void main() {
   runApp(SplashScreen());
 }
@@ -108,7 +109,10 @@ class DiceApp extends StatelessWidget {
                     ),
                     SizedBox(height: 20,),
                     RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) => HardPage()));
+                      },
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(0.0),
                       child: Container(
