@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'dart:math';
 
 
 void main() {
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Image(
                 image: AssetImage(
-                    'images/dice.png'),
+                    'images/Capture.jpg'),
                 height:300),
             Text("Dice App",style:TextStyle(fontSize: 50)),
             Text("Aashir Tariq",style:TextStyle(fontSize: 30)),
@@ -62,16 +63,70 @@ class DiceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.indigo,
-        body: Center(
-          child: Row(
+      debugShowCheckedModeBanner: false,
+      home: DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.pinkAccent, // status bar color
+            brightness: Brightness.dark,
+            title: Text('Dice App'),
+            bottom: TabBar(
+              tabs: [
+                Tab(text: "Game Level"),
+                Tab(text: "Contact Us"),
+              ],
+            ),
+          ),
+          body: TabBarView(
             children: [
-              // Expanded(
-              //   child: FlatButton(
-              //     onPressed: (){,
-              //   ),
-              // )
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RaisedButton(
+                      onPressed: () {},
+                      textColor: Colors.white,
+                      padding: const EdgeInsets.all(0.0),
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Colors.red,
+                              Colors.red,
+                              Colors.red,
+                            ],
+                          ),
+                        ),
+                        padding: const EdgeInsets.all(10.0),
+                        child:
+                        const Text('Simple Level', style: TextStyle(fontSize: 20)),
+                      ),
+                    ),
+                    SizedBox(height: 20,),
+                    RaisedButton(
+                      onPressed: () {},
+                      textColor: Colors.white,
+                      padding: const EdgeInsets.all(0.0),
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Colors.red,
+                              Colors.red,
+                              Colors.red,
+                            ],
+                          ),
+                        ),
+                        padding: const EdgeInsets.all(10.0),
+                        child:
+                        const Text('Hard Level', style: TextStyle(fontSize: 20)),
+                      ),
+                    ),
+                  ],),
+              ),
+              Text("Aashir Tariq",style:TextStyle(fontSize: 30)),
+
             ],
           ),
         ),
