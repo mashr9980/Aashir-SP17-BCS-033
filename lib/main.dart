@@ -5,6 +5,7 @@ import 'dart:math';
 import 'HomePage.dart';
 import 'HardPage.dart';
 import 'hard_level.dart';
+import 'dart:io';
 // import 'hardlevel.dart';
 import 'package:contactus/contactus.dart';
 
@@ -81,6 +82,19 @@ class DiceApp extends StatelessWidget {
                 Tab(text: "Contact Us"),
               ],
             ),
+            actions: <Widget>[
+              Padding(
+                  padding: EdgeInsets.only(right: 20.0),
+                  child: GestureDetector(
+                    onTap: () {exit(0);},
+                    child: Icon(
+                      Icons.close,
+                      size: 26.0,
+                    ),
+                  )
+              ),
+
+            ],
           ),
           body: TabBarView(
             children: [

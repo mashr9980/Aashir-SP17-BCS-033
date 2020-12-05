@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-
+import 'dart:io';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -85,6 +85,19 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.pinkAccent,
         title: Text('Simple Level'),
+        actions: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {exit(0);},
+                child: Icon(
+                  Icons.close,
+                  size: 26.0,
+                ),
+              )
+          ),
+
+        ],
       ),
       body: Container(
         child: Center(

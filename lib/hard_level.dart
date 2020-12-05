@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:after_layout/after_layout.dart';
 import 'dart:math';
-
+import 'dart:io';
 class hard_level extends StatefulWidget {
   @override
   _hardScreenState createState() => _hardScreenState();
@@ -183,6 +183,19 @@ class _hardScreenState extends State<hard_level>
       appBar: AppBar(
         title: Text('Hard Level'),
         backgroundColor: Colors.pinkAccent,
+        actions: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {exit(0);},
+                child: Icon(
+                  Icons.close,
+                  size: 26.0,
+                ),
+              )
+          ),
+
+        ],
       ),
       body: Center(
         child: Column(
