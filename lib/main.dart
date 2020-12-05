@@ -4,6 +4,9 @@ import 'dart:ui';
 import 'dart:math';
 import 'HomePage.dart';
 import 'HardPage.dart';
+import 'hard_level.dart';
+// import 'hardlevel.dart';
+import 'package:contactus/contactus.dart';
 
 void main() {
   runApp(SplashScreen());
@@ -111,7 +114,7 @@ class DiceApp extends StatelessWidget {
                     RaisedButton(
                       onPressed: () {
                         Navigator.pushReplacement(
-                            context, MaterialPageRoute(builder: (context) => HardPage()));
+                            context, MaterialPageRoute(builder: (context) => hard_level()));
                       },
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(0.0),
@@ -132,7 +135,19 @@ class DiceApp extends StatelessWidget {
                     ),
                   ],),
               ),
-              Text("Aashir Tariq",style:TextStyle(fontSize: 30)),
+              Column(
+                children: [
+                  ContactUs(
+                    logo: AssetImage('images/Capture.jpg'),
+                    email: 'mashr9980@gmail.com',
+                    companyName: 'Aashir Tariq',
+                    phoneNumber: '+923008808985',
+                    githubUserName: 'aashir9980',
+                    tagLine: 'Flutter Developer',
+                  ),
+                ],
+              )
+              // Text("Aashir Tariq",style:TextStyle(fontSize: 30)),
 
             ],
           ),
