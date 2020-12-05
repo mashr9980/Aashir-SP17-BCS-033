@@ -15,10 +15,10 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # screenshots
-<img src="screenshots/splacsh.png" height="300em" />
-<img src="screenshots/contact_us.png" />
-<img src="screenshots/dimple_level2.png" />
-<img src="screenshots/hard_level.png" />
-<img src="screenshots/hard_level2.png" />
-<img src="screenshots/main.png" />
-<img src="screenshots/simple_level.png" />
+<img src="screenshots/splacsh.png" height="350em" />
+<img src="screenshots/contact_us.png" height="350em" />
+<img src="screenshots/dimple_level2.png" height="350em" />
+<img src="screenshots/hard_level.png" height="350em" />
+<img src="screenshots/hard_level2.png" height="350em" />
+<img src="screenshots/main.png" height="350em" />
+<img src="screenshots/simple_level.png" height="350em" />
