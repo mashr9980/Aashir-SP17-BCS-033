@@ -1,58 +1,80 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'dart:math';
+import 'dart:ui';
+
 
 void main() {
-  return runApp(
-    MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.teal,
-        appBar: AppBar(
-          title: Text('Dicee'),
-          backgroundColor: Colors.blue,
-        ),
-        body: DicePage(),
-      ),
-    ),
-  );
+  runApp(SplashScreen());
 }
-
-class DicePage extends StatefulWidget {
-  @override
-  _DicePageState createState() => _DicePageState();
-}
-
-class _DicePageState extends State<DicePage> {
-  var left_image = Random().nextInt(5);
-  var right_image = Random().nextInt(5);
+class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                setState(() {
-                  left_image = Random().nextInt(5);
-                });
+    return MaterialApp(
+      title: 'Splash Screen',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
 
-                print('Value of Variable $left_image');
-              },
-              child: Image.asset('images/dice$left_image.png'),
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 6),
+            () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => DiceApp())));
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        color: Colors.white,
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 50,
             ),
+            Image(
+                image: AssetImage(
+                    'images/dice.png'),
+                height:300),
+            Text("Dice App",style:TextStyle(fontSize: 50)),
+            Text("Aashir Tariq",style:TextStyle(fontSize: 30)),
+            Text("SP17-BCS-033",style:TextStyle(fontSize: 30)),
+            SizedBox(height: 10,),
+          ],
+        )
+    );
+  }
+}
+
+class DiceApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.indigo,
+        body: Center(
+          child: Row(
+            children: [
+              // Expanded(
+              //   child: FlatButton(
+              //     onPressed: (){,
+              //   ),
+              // )
+            ],
           ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                setState(() {
-                  right_image = Random().nextInt(5);
-                });
-                print('Value of Variable $right_image');
-              },
-              child: Image.asset('images/dice$right_image.png'),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
